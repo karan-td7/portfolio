@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
     motion,
     AnimatePresence,
@@ -8,21 +8,20 @@ import {
 } from "framer-motion";
 import Link from "next/link";
 import { cn } from "@/utils/cn";
+import { navItems } from '@/data';
 
 export const FloatingNav = ({
-    navItems,
     className,
 }: {
-    navItems: {
-        name: string;
-        link: string;
-        icon?: JSX.Element;
-    }[];
     className?: string;
 }) => {
     const { scrollYProgress } = useScroll();
 
     const [visible, setVisible] = useState(true);
+
+    useEffect(() => {
+        console.log('FloatingNav is mounted on client side');
+    }, []);
 
     useMotionValueEvent(scrollYProgress, "change", (current) => {
         if (typeof current === "number") {
