@@ -1,6 +1,7 @@
 export const myEmail = 'mkaran71999@gmail.com'
 
 export const navItems = [
+    { name: "Home", link: "#home" },
     { name: "About", link: "#about" },
     { name: "Projects", link: "#projects" },
     { name: "Experience", link: "#experience" },
