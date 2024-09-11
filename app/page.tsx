@@ -10,7 +10,7 @@ const Experience = dynamic(() => import("@/components/Experience"), {
 const Footer = dynamic(() => import("@/components/Footer"), { ssr: false });
 const Grid = dynamic(() => import("@/components/Grid"), { ssr: false });
 const Hero = dynamic(() => import("@/components/Hero"), { ssr: false });
-const RecentProjects = dynamic(() => import("@/components/RecentProjects"), {
+const WorkProjects = dynamic(() => import("@/components/WorkProjects"), {
   ssr: false,
 });
 const FloatingNav = dynamic(() => import("@/components/ui/FloatingNav"), {
@@ -30,7 +30,7 @@ export default function Home() {
         <FloatingNav />
         <Hero />
         <Grid />
-        <RecentProjects />
+        <WorkProjects />
         <Experience />
         <Approach />
         <Footer />
