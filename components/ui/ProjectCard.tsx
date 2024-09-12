@@ -20,7 +20,7 @@ export const ProjectContainer = ({
   const [transform, setTransform] = useState("translate(-50%,-50%)");
 
   const onMouseEnter = () => {
-    setTransform("translate(-50%, -50%) scale(1.2)");
+    setTransform("translate(-50%, -50%) scale(1.1)");
   };
   const onMouseLeave = () => {
     setTransform("translate(-50%,-50%) rotateX(0deg) scale(1)");
@@ -46,7 +46,8 @@ export const ProjectContainer = ({
           // remove  bg-black
           className="absolute left-1/2 p-4 top-1/2 flex justify-start items-start 
           rounded-2xl shadow-[0_8px_16px_rgb(0_0_0/0.4)] border border-white/[0.1] 
-          group-hover/pin:border-white/[0.2] transition duration-700 overflow-hidden lg:w-[50vw] sm:w-[70vw]"
+          transition duration-700 overflow-hidden lg:w-[50vw] sm:w-[70vw] 
+          hover:shadow-[0_4px_6px_#c5a7f3]"
         >
           <div className={cn(" relative z-50 ", className)}>{children}</div>
         </div>

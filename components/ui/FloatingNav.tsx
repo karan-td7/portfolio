@@ -15,9 +15,9 @@ const FloatingNav = ({ className }: { className?: string }) => {
 
   const [visible, setVisible] = useState(true);
 
-  useEffect(() => {
-    console.log("FloatingNav is mounted on client side");
-  }, []);
+  // useEffect(() => {
+  //   console.log("FloatingNav is mounted on client side");
+  // }, []);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     if (typeof current === "number") {
